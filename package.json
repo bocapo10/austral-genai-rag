@@ -34,7 +34,7 @@
     "chromadb": "^1.7.3",
     "chromadb-default-embed": "^2.14.0",
     "dotenv": "^17.2.3",
-    "express": "^5.1.0",
+    "express": "^5.2.0",
     "json-rpc-2.0": "^1.7.1",
     "langchain": "^1.0.0-alpha.9",
     "node-fetch": "^3.3.2",
