@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
-import { ChromaClient, DefaultEmbeddingFunction } from 'chromadb';
+import { ChromaClient, getEmbeddingFunction } from 'chromadb';
 import express from 'express';
 import { z } from 'zod';
 
@@ -44,7 +44,7 @@ mcp.registerTool(
         
         const coll = await chromaClient.getCollection({ 
             name: collection,
-            embeddingFunction: new DefaultEmbeddingFunction()
+            //embeddingFunction: getEmbeddingFunction({collectionName:collection,client:ChromaClient})
         });
         const results = await coll.query({
             queryTexts: [query],
@@ -114,7 +114,7 @@ mcp.registerTool(
         
         const coll = await chromaClient.getCollection({ 
             name: collection,
-            embeddingFunction: new DefaultEmbeddingFunction()
+            //embeddingFunction: new getEmbeddingFunction({collectionName:collection,client:ChromaClient})
         });
         const count = await coll.count();
         
