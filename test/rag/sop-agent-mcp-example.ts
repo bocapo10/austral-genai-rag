@@ -52,7 +52,7 @@ async function main() {
     try {
         console.log('═══════════════════════════════════════════════════');
         console.log('   Agent with MCP Interoperability Demo');
-        console.log('   Product Assistant - Works with Any MCP Server');
+        console.log('   SOP Agent - Works with Any MCP Server');
         console.log('═══════════════════════════════════════════════════\n');
         
         // Create MCP client that connects to HTTP server
